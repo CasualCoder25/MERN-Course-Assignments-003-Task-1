@@ -1,25 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css"
+import WordCounter from "./components/WordCounter"
+import "../node_modules/bootstrap/dist/css/bootstrap.min.css"
 
 function App() {
+  const WordCounterSpace = { width: "600px", height: "350px" }
+  const AppSpace = { width: "100%", height: "100vh" }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="d-flex justify-content-center align-items-center" style={AppSpace}>
+      <div style={WordCounterSpace}>
+        <WordCounter />
+      </div>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
